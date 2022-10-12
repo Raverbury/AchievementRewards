@@ -2,6 +2,8 @@ package raverbury.achievement_rewards.item;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,8 +16,7 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-import raverbury.achievement_rewards.ModItem;
-import raverbury.achievement_rewards.MyUtil.Misc;
+import raverbury.achievement_rewards.util.Misc;
 
 public class TomeOfEnlightenmentItem extends Item {
 
@@ -25,7 +26,7 @@ public class TomeOfEnlightenmentItem extends Item {
   private static final int LEVEL_GAINED = 3;
 
   public TomeOfEnlightenmentItem() {
-    super(new Item.Properties().group(ModItem.ModCreativeTab.instance).rarity(Rarity.EPIC));
+    super(new Item.Properties().group(ARModItems.ModCreativeTab.instance).rarity(Rarity.EPIC));
   }
 
   @Override
@@ -36,9 +37,10 @@ public class TomeOfEnlightenmentItem extends Item {
   }
 
   @Override
-  public void addInformation(ItemStack stack, World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+  public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
     if (Screen.hasShiftDown()) {
-      tooltip.add(new TranslationTextComponent("tooltip.achievement_rewards.tome_of_enlightenment_expanded", LEVEL_THRESHOLD, LEVEL_GAINED));
+      tooltip.add(new TranslationTextComponent("tooltip.achievement_rewards.tome_of_enlightenment_expanded",
+          LEVEL_THRESHOLD, LEVEL_GAINED));
     } else {
       tooltip.add(new TranslationTextComponent("tooltip.achievement_rewards.hold_shift_for_more"));
     }

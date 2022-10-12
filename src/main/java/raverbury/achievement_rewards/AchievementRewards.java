@@ -1,10 +1,14 @@
 package raverbury.achievement_rewards;
 
+import java.util.stream.Collectors;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.entity.player.AdvancementEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -15,10 +19,8 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.stream.Collectors;
+import raverbury.achievement_rewards.item.ARModItems;
+import raverbury.achievement_rewards.sound.ARSounds;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(AchievementRewards.MOD_ID)
@@ -28,13 +30,6 @@ public class AchievementRewards {
 
   // Public static mod id
   public static final String MOD_ID = "achievement_rewards";
-
-  @SubscribeEvent
-  public static void advancementEventListener(AdvancementEvent event) {
-    if (event.getAdvancement().getDisplay() != null)
-      // event.getPlayer().addItemStackToInventory(new ItemStack(ModItem.REWARD_BAG_ITEM.get(), 1));
-      return;
-  }
 
   public AchievementRewards() {
     // Register the setup method for modloading
@@ -48,11 +43,11 @@ public class AchievementRewards {
 
     // Register mod items
     final IEventBus forgeEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-    ModItem.ITEMS.register(forgeEventBus);
+    ARModItems.registerItems(forgeEventBus);
+    ARSounds.registerSounds(forgeEventBus);
 
     // Register ourselves for server and other game events we are interested in
     MinecraftForge.EVENT_BUS.register(this);
-    MinecraftForge.EVENT_BUS.addListener(AchievementRewards::advancementEventListener);
   }
 
   private void setup(final FMLCommonSetupEvent event) {

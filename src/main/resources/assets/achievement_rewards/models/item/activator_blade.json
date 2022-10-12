@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+      "layer0": "achievement_rewards:items/activator_blade"
+  }
+}

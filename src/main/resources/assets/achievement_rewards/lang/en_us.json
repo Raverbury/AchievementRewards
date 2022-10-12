@@ -3,11 +3,14 @@
 
   "item.achievement_rewards.reward_bag": "Reward Bag",
   "item.achievement_rewards.tome_of_enlightenment": "Tome of Enlightenment",
-  "item.achievement_rewards.shatter_glass_sword": "Shatter Glass Sword",
+  "item.achievement_rewards.activator_blade": "Activator Blade",
   "item.achievement_rewards.sustain_sword": "Sustain Sword",
 
   "tooltip.achievement_rewards.hold_shift_for_more": "\u00A77\u00A7iHold \u00A7f\u00A7iSHIFT\u00A77\u00A7i for more...\u00A7r",
   "tooltip.achievement_rewards.tome_of_enlightenment_expanded": "Raises experience level to %1$s if it is below %1$s. Raises it by %2$s otherwise.",
-  "tooltip.achievement_rewards.shatter_glass_sword_expanded": "Every %1$s hit, deals %2$s bonus magic damage.",
-  "tooltip.achievement_rewards.sustain_sword_expanded": "Deals %1$s of target's max health as magic damage on hit and heals for %2$s of the pre-mitigated damage dealt."
+  "tooltip.achievement_rewards.activator_blade_expanded": "Every %1$s hit(s), deals %2$s bonus \u00A75magic damage\u00A7r.",
+  "tooltip.achievement_rewards.sustain_sword_expanded": "Full-strength attacks increase damage dealt by %1$s of target's max health and \u00A7aheal\u00A7f user for %2$s of the pre-mitigated bonus damage dealt.",
+
+  "sound.achievement_rewards.activator_ready": "Activator Blade readies",
+  "sound.achievement_rewards.activator_unleash": "Activator Blade unleashes"
 }

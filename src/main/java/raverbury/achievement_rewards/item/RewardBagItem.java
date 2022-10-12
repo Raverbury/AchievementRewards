@@ -7,17 +7,17 @@ import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
-import raverbury.achievement_rewards.ModItem;
-import raverbury.achievement_rewards.MyUtil.WeightedList;
+import raverbury.achievement_rewards.util.WeightedList;
 
 public class RewardBagItem extends Item {
 
   public RewardBagItem() {
-    super(new Item.Properties().group(ModItem.ModCreativeTab.instance));
+    super(new Item.Properties().group(ARModItems.ModCreativeTab.instance));
   }
 
   public static final String ITEM_ID = "reward_bag";
-  // public static final Properties ITEM_PROPERTIES = new Item.Properties().group(ModItem.ModCreativeTab.instance);
+  // public static final Properties ITEM_PROPERTIES = new
+  // Item.Properties().group(ModItem.ModCreativeTab.instance);
 
   private static final WeightedList<ItemStack> possibleRewards = new WeightedList<ItemStack>()
       .add(new ItemStack(Items.EMERALD, 10), 4.0)
@@ -31,8 +31,11 @@ public class RewardBagItem extends Item {
       .add(new ItemStack(Items.ARROW, 4), 14.0)
       .add(new ItemStack(Items.BOOK, 1), 11.0)
       .add(new ItemStack(Items.STRING, 1), 17.0);
-      // .add(new ItemStack(ModItem.TOME_OF_ENLIGHTENMENT_ITEM.get(), 1), 2.0);
-      // .add(new ItemStack(ModItem.TRANSFORMATIVE_SWORD_REGISTRY_ITEM.get(), 1), 1.0);
+  // .add(new ItemStack(ARModItem.SHATTER_GLASS_SWORD.get(), 1), 2.0)
+  // .add(new ItemStack(ARModItem.SUSTAIN_SWORD_ITEM.get(), 1), 2.0);
+  // .add(new ItemStack(ModItem.TOME_OF_ENLIGHTENMENT_ITEM.get(), 1), 2.0);
+  // .add(new ItemStack(ModItem.TRANSFORMATIVE_SWORD_REGISTRY_ITEM.get(), 1),
+  // 1.0);
 
   private static ItemStack getRandomItemStackFromRewardList() {
     ItemStack newItemStack = possibleRewards.getRandomItem().copy();

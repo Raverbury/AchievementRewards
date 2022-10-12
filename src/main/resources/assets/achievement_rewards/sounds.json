@@ -1,0 +1,14 @@
+{
+  "activator_ready": {
+    "subtitle": "sound.achievement_rewards.activator_ready",
+    "sounds": [
+      "achievement_rewards:se_powerup"
+    ]
+  },
+  "activator_unleash": {
+    "subtitle": "sound.achievement_rewards.activator_unleash",
+    "sounds": [
+      "achievement_rewards:se_tan00"
+    ]
+  }
+}

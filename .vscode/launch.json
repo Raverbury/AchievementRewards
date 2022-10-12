@@ -31,7 +31,7 @@
       "projectName": "AchievementRewards",
       "cwd": "${workspaceFolder}\\run",
       "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dforge.logging.markers\u003dREGISTRIES -XX:+IgnoreUnrecognizedVMOptions --add-exports\u003djava.base/sun.security.util\u003dALL-UNNAMED --add-exports\u003djdk.naming.dns/com.sun.jndi.dns\u003djava.naming --add-opens\u003djava.base/java.util.jar\u003dALL-UNNAMED",
-      "args": "--mod examplemod --all --output \"C:\\Users\\user\\Documents\\Inner Sanctum\\Programming\\Minecraft\\AchievementRewards\\src\\generated\\resources\" --existing \"C:\\Users\\user\\Documents\\Inner Sanctum\\Programming\\Minecraft\\AchievementRewards\\src\\main\\resources\"",
+      "args": "--mod examplemod --all --output C:\\Users\\user\\Documents\\EchoSierra\\Coding\\Minecraft\\AchievementRewards\\src\\generated\\resources --existing C:\\Users\\user\\Documents\\EchoSierra\\Coding\\Minecraft\\AchievementRewards\\src\\main\\resources",
       "env": {
         "MOD_CLASSES": "examplemod%%${workspaceFolder}\\bin\\main;examplemod%%${workspaceFolder}\\bin\\main",
         "MCP_MAPPINGS": "snapshot_20210309-1.16.5",
